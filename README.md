@@ -3,7 +3,10 @@
 
 ## GCN
 对于GCN，我们将模型参数的初始化交给了kai_ming_uniform_，定义线性层来替代定义变量与变化初始化，并将模型并行化，引入batch的维度
-`123`
+`from gcn import gcn_model` 导入模型
+`model = gcn_model(inchannels, out_channels)` 初始化模型
+`for idx, (image, adj, label) in enumerate(dataloader):`
+` output=model(image, adj)`
 
 ## GAT
 对于GAT，我们将attention concat的操作简化为简单的矩阵相加，并将模型并行化，引入batch的维度
