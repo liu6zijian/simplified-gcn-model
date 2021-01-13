@@ -6,13 +6,21 @@
 ```
 from gcn import gcn_model # 导入模型
 
-model = gcn_model(inchannels, out_channels) # 初始化模型
+model = gcn_model(inchannels, out_channels, hid_c=16) # 初始化模型
 
 for idx, (image, adj, label) in enumerate(dataloader):
-
-  output = model(image, adj) # 将数据喂入模型
+    loss = F.cross_entropy_loss(output, label)
+    output = model(image, adj) # 将数据喂入模型
 ```
 ## GAT
 对于GAT，我们将attention concat的操作简化为简单的矩阵相加，并将模型并行化，引入batch的维度
+```
+from gat import gat_model
+
+model = gat_model(inchannels, out_channels, hid_c=16, head=8)
+for idx, (image, adj, label) in enumerate(dataload):
+    output = model(image, adj)
+    loss = F.cross_entropy_loss(output, label)
+```
 
 
