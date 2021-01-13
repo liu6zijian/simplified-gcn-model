@@ -41,8 +41,8 @@ h1 = a_1 h
 h2 = a_2 h
 e = h1.repeat(1,N) + h2.repeat(N,1).t()
 ```
-![image](https://raw.githubusercontent.com/liu6zijian/simplified-gcn-model/main/simplified_calculation.png)
-<img src="https://raw.githubusercontent.com/liu6zijian/simplified-gcn-model/main/simplified_calculation.png" width="200" height="200" alt="微信小程序"/><br/>
+
+<img src="https://raw.githubusercontent.com/liu6zijian/simplified-gcn-model/main/simplified_calculation.png" width="500" height="500" alt="image"/><br/>
 
 
 ```
