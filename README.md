@@ -41,7 +41,7 @@ h1 = a_1 h
 h2 = a_2 h
 e = h1.repeat(1,N) + h2.repeat(N,1).t()
 ```
-![image]simplified_calculation.png
+![image]https://raw.githubusercontent.com/liu6zijian/simplified-gcn-model/main/simplified_calculation.png
 
 
 ```
