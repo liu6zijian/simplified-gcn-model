@@ -7,8 +7,14 @@
 from gcn import gcn_model # 导入模型
 
 model = gcn_model(inchannels, out_channels, hid_c=16) # 初始化模型
-
+model = model.cuda()
 for idx, (image, adj, label) in enumerate(dataloader):
+    '''
+    image [N, F_1]
+    adj [N, N]
+    label [N], one hot of [N, F_3]
+    '''
+    image, adj, label = image.cuda(), adj.cuda(), label.cuda()
     loss = F.cross_entropy_loss(output, label)
     output = model(image, adj) # 将数据喂入模型
 ```
@@ -18,7 +24,9 @@ for idx, (image, adj, label) in enumerate(dataloader):
 from gat import gat_model
 
 model = gat_model(inchannels, out_channels, hid_c=16, head=8)
+model = model.cuda()
 for idx, (image, adj, label) in enumerate(dataload):
+    image, adj, label = image.cuda(), adj.cuda(), label.cuda()
     output = model(image, adj)
     loss = F.cross_entropy_loss(output, label)
 ```
