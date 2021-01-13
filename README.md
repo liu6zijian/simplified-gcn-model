@@ -1,4 +1,4 @@
-# simplify-gcn-model
+# simplified-gcn-model
 我们提供了简化的GCN和GAT模型，原模型取自于ICLR的会议文章
 
 ## GCN
