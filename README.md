@@ -1,6 +1,9 @@
 # simplified-gcn-model
 我们提供了简化的GCN和GAT模型，原模型取自于ICLR的会议文章
->https://github.com/Diego999/pyGAT
+GCN paper >https://arxiv.org/pdf/1609.02907.pdf
+GCN pytorch version >https://github.com/tkipf/pygcn
+GAT paper >https://arxiv.org/pdf/1710.10903.pdf
+GAT pytorch version >https://github.com/Diego999/pyGAT
 
 ## GCN
 对于GCN，我们将模型参数的初始化交给了kai_ming_uniform_，定义线性层来替代定义变量与变化初始化，并将模型并行化，引入batch的维度
