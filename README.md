@@ -1,8 +1,12 @@
 # simplified-gcn-model
 我们提供了简化的GCN和GAT模型，原模型取自于ICLR的会议文章
+## source
 GCN paper >https://arxiv.org/pdf/1609.02907.pdf
+
 GCN pytorch version >https://github.com/tkipf/pygcn
+
 GAT paper >https://arxiv.org/pdf/1710.10903.pdf
+
 GAT pytorch version >https://github.com/Diego999/pyGAT
 
 ## GCN
